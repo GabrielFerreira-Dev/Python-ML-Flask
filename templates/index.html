@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de Machine Learning</title>
+</head>
+<body>
+    <h1>Classificador de Machine Learning</h1>
+    <form action="/treinar_testar" method="post">
+        <label for="tipo_classificador">Escolha um classificador:</label>
+        <select name="tipo_classificador" id="tipo_classificador">
+            <option value="KNN">KNN</option>
+            <option value="SVM">SVM</option>
+            <option value="MLP">MLP</option>
+            <option value="DT">Árvore de Decisão</option>
+        </select>
+
+        <label for="param1">Parâmetro 1:</label>
+        <input type="text" name="param1" id="param1">
+
+        <label for="param2">Parâmetro 2:</label>
+        <input type="text" name="param2" id="param2">
+
+        <button type="submit">Treinar e Testar</button>
+    </form>
+
+    <p>KNN, SVM e DT utilizam um parâmetro, MLP utiliza dois parâmetros.</p>
+    <hr>
+    <br>
+    <h2>Intervalos Típicos para Parâmetros</h2>
+
+    <h3>K-Nearest Neighbors (KNN):</h3>
+    <p>
+        Parâmetro 1 (n_neighbors): Número de vizinhos a serem considerados.<br>
+        Intervalo típico: 1 a 20.
+    </p>
+
+    <h3>Support Vector Machine (SVM):</h3>
+    <p>
+        Parâmetro 1 (C): Parâmetro de regularização.<br>
+        Intervalo típico: 0.1 a 100.
+    </p>
+
+    <h3>Multilayer Perceptron (MLP):</h3>
+    <p>
+        Parâmetro 1 (hidden_layer_sizes): Número de neurônios em cada camada oculta.<br>
+        Intervalo típico: (5, 2) a (100, 5) - Exemplo: (10, 2) significa 2 camadas ocultas com 10 e 2 neurônios, respectivamente.<br>
+        Parâmetro 2 (alpha): Termo de penalização L2 (regularização).<br>
+        Intervalo típico: 1e-5 a 1e-2.
+    </p>
+    <h3>Árvore de Decisão:</h3>
+    <p>
+        Parâmetro 1 (max_depth): Profundidade máxima da árvore.<br>
+        Intervalo típico: 1 a 20.
+    </p>
+</body>
+</html>
